@@ -1,0 +1,48 @@
+---
+title: "R & Python"
+author: "Bora YILDIZ"
+date: "3/3/2021"
+output: html_document
+---
+# SOURCE
+
+https://rstudio.com/solutions/r-and-python/
+
+```{r setup, include=FALSE}
+install.packages("reticulate")
+library(reticulate)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R? Markdown
+
+In R Markdown, including in the new visual editor, y
+ou can use both R and Python inter-cahgeably
+
+```{r cars}
+cars <- mtcars
+
+```
+
+
+
+
+```{python}
+import pandas as pd
+cars_avg = (pd.Dataframe
+.from_dict(r.cars)
+.groupby('cyl')
+.agg('mean'))
+cars_avg ['cyl']= cars_avg.index
+```
+
+
+
+```{r}
+library(ggplot2)
+ggplot(py$cars_avg) + geom_col(aes(cyl, mpg))
+```
+
+
+
+
