@@ -19,13 +19,13 @@ knitr::opts_chunk$set(echo = TRUE)
 In R Markdown, including in the new visual editor, y
 ou can use both R and Python inter-cahgeably
 
+## Swich R
+
 ```{r cars}
 cars <- mtcars
 
 ```
-
-
-
+## Swich Python
 
 ```{python}
 import pandas as pd
@@ -36,7 +36,7 @@ cars_avg = (pd.Dataframe
 cars_avg ['cyl']= cars_avg.index
 ```
 
-
+## Swich R
 
 ```{r}
 library(ggplot2)
